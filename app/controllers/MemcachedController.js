@@ -30,6 +30,8 @@ module.exports = {
 
     /**
      * @todo Описать метод PUT /memcached/:key {"value":"baz","expires":90}, чтобы он менял данные в memcached по указанному ключу
+     * @example curl -v -X PUT "http://127.0.0.1:8081/memcached/bar" -d '{"value":"foo","expires":60}' -H "Content-Type: application/json"
+
      * @param next
      */
     putAction: function * (next){
@@ -77,6 +79,7 @@ module.exports = {
     /**
      *
      * @todo Описать метод DELETE /memcached/:key который удалял бы по ключу из memcached. Использовать другие методы преобразования функций для работы с memcached
+     * @example curl -v -X DELETE "http://127.0.0.1:8081/memcached/bar"
      * @param next
      * +
      */
